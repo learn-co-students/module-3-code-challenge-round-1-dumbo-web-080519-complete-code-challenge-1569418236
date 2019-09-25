@@ -1,18 +1,18 @@
 # JavaScript Code Challenge
 
 ## Allowed Resources
-This Code Challenge is designed to test your abilities in a similar situation to a technical assessment from an employer. In order to achieve an accurate assessment, there are a few restrictions on the resources you may use to complete this code challenge. 
+This Code Challenge is designed to test your abilities in a similar situation to a technical assessment from an employer. In order to achieve an accurate assessment, there are a few restrictions on the resources you may use to complete this code challenge.
 
 ### Allowed
 
  1. Your brain!
  2. The Debugger. Please run and debug your code
  3. The general internet
- 
+
 ### Not Allowed
 
  1. Other students
- 2. Any prepared materials 
+ 2. Any prepared materials
  3. Any lessons
  4. Any solution code from any lab, whether you wrote it or Flatiron School did
  5. Code from any lecture
@@ -31,9 +31,9 @@ Today we're building an app for viewing, liking, and commenting on a single pict
 A user of your app must be able to do the following things:
 
 - As a user, when the page loads, I should see:
-  - an image
-  - any comments that image has
-  - the number of likes that image has
+  <!-- - an image -->
+  <!-- - any comments that image has -->
+  <!-- - the number of likes that image has -->
 
 - As a user, I can click a button to like an image. When I click, the number of likes the image has should increase by one without the page refreshing.
 
@@ -88,10 +88,10 @@ Example Response:
 
 Use the data from the API response to change what's currently on the page (take a look at the already provided `index.html`). You will need to add/update:
 
-- the image url
-- the image name
-- the number of likes
-- any comments in an unordered list
+<!-- - the image url -->
+<!-- - the image name -->
+<!-- - the number of likes -->
+- any comments in an unordered list****
 
 (If you cannot get your fetch request to work correctly, you can  use the example response above to append content to the DOM and attempt the subsequent steps)
 
