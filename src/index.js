@@ -20,25 +20,22 @@ document.addEventListener('DOMContentLoaded', () => {
   .then(res => res.json())
   .then(res => {
     const imgName = document.querySelector("#name")
+    imgName.innerText = res.name
+    imgTag.dataset.id = imageId
+    imgTag.src = res.url
+    numLikes.innerText = res.like_count
     res.comments.forEach(comment => {
-      // debugger
       const commentInput = document.querySelector("#comment_input")
       const commentLi = document.createElement("li")
       const commentContent = comment.content
-      commentLi.innerText = commentContent
+      commentLi.innerHTML = `${commentContent}   <button data-id="${comment.id}" class="delete">X</button>`
       commentUl.append(commentLi)
 
-      imgName.innerText = res.name
-      imgTag.dataset.id = imageId
-      imgTag.src = res.url
-      numLikes.innerText = res.like_count
     })
-
-    // debugger
   })
   
   likeButton.addEventListener("click", function(e){
-    // debugger
+    
     let currentLikes = parseInt(numLikes.innerText, 10)
     let newLikes = currentLikes + 1
     numLikes.innerText = newLikes
@@ -60,10 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const commentInput = document.querySelector("#comment_input")
     const commentLi = document.createElement("li")
     const commentContent = commentInput.value
-    commentLi.innerText = commentContent
-    commentUl.append(commentLi)
-    // debugger
-
+    
     fetch(commentsURL, {
       method: "POST",
       headers: {
@@ -74,7 +68,21 @@ document.addEventListener('DOMContentLoaded', () => {
         image_id: imageId,
         content: commentContent
       })
-    })
+    }).then(res => res.json())
+      .then(res => {
+        commentLi.innerHTML = `${commentContent}<button data-id="${res.id}" class="delete">X</button>`
+        commentUl.append(commentLi)
+      })
   })
+
+  commentUl.addEventListener("click", function(e){
+    if(e.target.className === "delete"){
+      console.log("hi")
+      fetch(`${commentsURL}/${e.target.dataset.id}`, {
+        method: "DELETE"
+      }).then(e.target.parentElement.remove())
+    }
+  })
+
 })
 
