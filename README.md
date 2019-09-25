@@ -61,7 +61,7 @@ When the page loads, you will need to make a request to the API to get the data 
 
 Visit https://randopic.herokuapp.com/ in your web browser. The backend will assign you your very own `image_id`.  **THIS IS YOUR ASSIGNED IMAGE. This prevents your classmates from editing your images and vice versa**.
 
-**Before you start anything else, locate the variable `imageId` in the `src/index.js`. Replace the value of the variable with your image id, and use it as the `/:id` parameter in your initial GET request.** This will be the image you'll be working with for this code challenge.
+<!-- **Before you start anything else, locate the variable `imageId` in the `src/index.js`. Replace the value of the variable with your image id, and use it as the `/:id` parameter in your initial GET request.** This will be the image you'll be working with for this code challenge. -->
 
 ```js
 GET 'https://randopic.herokuapp.com/images/:id'
@@ -88,24 +88,24 @@ Example Response:
 
 Use the data from the API response to change what's currently on the page (take a look at the already provided `index.html`). You will need to add/update:
 
-- the image url
+<!-- - the image url
 - the image name
 - the number of likes
-- any comments in an unordered list
-
-(If you cannot get your fetch request to work correctly, you can  use the example response above to append content to the DOM and attempt the subsequent steps)
-
+- any comments in an unordered list -->
+<!-- 
+(If you cannot get your fetch request to work correctly, you can  use the example response above to append content to the DOM and attempt the subsequent steps) -->
+<!-- 
 ## Step 2 - Like Feature (Frontend)
 
 The next feature to approach is the functionality to add likes to a picture. First, get this working in the browser only without worrying about persistence.
 
 Clicking the 'Like' button should increase the number of likes shown on the page by one.
 
-A user can like the same picture multiple times.
+A user can like the same picture multiple times. -->
 
 ---
 
-## Step 3 - Like Feature (Backend)
+<!-- ## Step 3 - Like Feature (Backend)
 
 This app will use what is called _optimistic rendering_. This means the DOM will be updated *before* the changes are added to the database. When a user clicks the 'Like' button we will immediately update the DOM. Next, your job is to make a POST request to persist the new Like in the backend database.
 
@@ -144,7 +144,7 @@ Since we are using optimistic rendering, you shouldn't have to do anything with 
 
 To test your code, make sure the number of likes increments when you click the like button. Then, refresh the page and make sure the increased number of likes remains the same.
 
----
+--- -->
 
 ## Step 4 - Comment Feature (Frontend)
 
