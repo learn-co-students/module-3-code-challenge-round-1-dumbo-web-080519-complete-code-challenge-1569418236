@@ -146,11 +146,11 @@ To test your code, make sure the number of likes increments when you click the l
 
 --- -->
 
-## Step 4 - Comment Feature (Frontend)
+<!-- ## Step 4 - Comment Feature (Frontend)
 
 The next feature to approach is the functionality to add comments to a picture. First, get this working in the browser only, without worrying about persistence.
 
-Filling out the input and clicking 'Submit' should append your new comment as an `<li>` to the comments unordered list element. You should also clear out the text in the comment input, so it's empty and ready for the next comment to be added.
+Filling out the input and clicking 'Submit' should append your new comment as an `<li>` to the comments unordered list element. You should also clear out the text in the comment input, so it's empty and ready for the next comment to be added. -->
 
 ## Step 5 - Comment Feature (Backend)
 
@@ -165,17 +165,17 @@ Similarly to before, this POST request's body should include the your assigned `
 ```js
 POST 'https://randopic.herokuapp.com/comments'
 
-Required keys in the body of the request:
-{
-  image_id: (insert image id here),
-  content: (insert comment content here)
-}
+// Required keys in the body of the request:
+// {
+//   image_id: (insert image id here),
+//   content: (insert comment content here)
+// }
 
-Required Headers
-{
-  'Accept': 'application/json',
-  'Content-Type': 'application/json'
-}
+// Required Headers
+// {
+//   'Accept': 'application/json',
+//   'Content-Type': 'application/json'
+// }
 ```
 
 
