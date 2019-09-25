@@ -80,7 +80,8 @@ document.addEventListener('DOMContentLoaded', () => {
       console.log("hi")
       fetch(`${commentsURL}/${e.target.dataset.id}`, {
         method: "DELETE"
-      }).then(e.target.parentElement.remove())
+      }).then(alert("Your comment was deleted!"))
+        .then(e.target.parentElement.remove())
     }
   })
 
