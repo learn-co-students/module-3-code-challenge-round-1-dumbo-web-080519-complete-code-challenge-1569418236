@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('%c DOM Content Loaded and Parsed!', 'color: magenta')
+  console.log('🚀🚀🚀 %c DOM Content Loaded and Parsed! 🚀🚀🚀', 'color: magenta')
 
   let imageId = 3449 //Enter the id from the fetched image here
 
